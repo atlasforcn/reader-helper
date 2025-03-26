@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逐行閱讀輔助工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>逐行閱讀輔助工具</h1>
+        <p class="description">貼上文字，系統將根據句號、驚嘆號和刪節號分行顯示，並高亮當前閱讀行。</p>
+        
+        <div class="input-section">
+            <textarea id="inputText" placeholder="請在此貼上您想要閱讀的文字..."></textarea>
+            <button id="processBtn">處理文字</button>
+        </div>
+        
+        <div class="reading-section" id="readingSection">
+            <div class="controls">
+                <button id="prevBtn">上一行</button>
+                <button id="nextBtn">下一行</button>
+                <button id="resetBtn">重置</button>
+                <div class="speed-control">
+                    <label for="autoReadSpeed">自動閱讀速度:</label>
+                    <select id="autoReadSpeed">
+                        <option value="0">關閉</option>
+                        <option value="1000">慢速</option>
+                        <option value="700">中速</option>
+                        <option value="400">快速</option>
+                    </select>
+                </div>
+                <div class="focus-control">
+                    <label for="focusMode">非高亮文字:</label>
+                    <select id="focusMode">
+                        <option value="normal">正常顯示</option>
+                        <option value="blur">模糊顯示</option>
+                        <option value="hide">遮擋</option>
+                    </select>
+                </div>
+            </div>
+            <div id="textDisplay" class="text-display"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
